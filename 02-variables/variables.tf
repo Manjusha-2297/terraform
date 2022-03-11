@@ -41,3 +41,8 @@ output "list1" {
 output "map1" {
  value = var.training["course"]
 }
+
+variable "new1" {}
+output "new1" {
+ value = var.new1
+}
