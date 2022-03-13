@@ -10,3 +10,7 @@ resource "aws_instance" "sample" {
     Name        = "sample"
   }
 }
+
+output "ip" {
+  value = aws_instance.sample.*.public_ip[0]
+}
