@@ -40,6 +40,13 @@ resource "null_resource" "remote" {
   }
 }
 
+resource "null_resource" "destroy" {
+  provisioner "local-exec" {
+    when    = destroy
+    command="echo Destroy time provisioner"
+  }
+}
+
 
 resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
