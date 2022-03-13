@@ -22,3 +22,22 @@ variable "names" {
 variable "ami" {
   default = null
 }
+
+#
+#resource "aws_instance" "sample1" {
+#  count         = var.ami == "ami-0e4e4b2f188e91845" ? 1 : 0
+#  ami           = "ami-0e4e4b2f188e91845"
+#  instance_type = "t3.small"
+#  tags          = {
+#    Name        = var.names[count.index]
+#  }
+#}
+#
+#resource "aws_instance" "sample" {
+#  count         = var.ami != "ami-0e4e4b2f188e91845" ? 1 : 0
+#  ami           = var.ami
+#  instance_type = "t3.small"
+#  tags          = {
+#    Name        = var.names[count.index]
+#  }
+#}
