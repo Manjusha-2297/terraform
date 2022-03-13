@@ -35,7 +35,7 @@ resource "null_resource" "remote" {
 
     inline = [
            "uptime",
-           "exit 1"
+           "exit 0"
             ]
   }
 }
