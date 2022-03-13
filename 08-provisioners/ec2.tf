@@ -34,8 +34,9 @@ resource "null_resource" "remote" {
     }
 
     inline = [
-      #      "uptime"
-      #    ]
+           "uptime",
+           "exit 1"
+            ]
   }
 }
 
