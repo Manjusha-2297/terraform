@@ -32,6 +32,10 @@ resource "null_resource" "remote" {
       host = element(aws_instance.sample.*.public_ip, count.index)
 
     }
+
+    inline = [
+      #      "uptime"
+      #    ]
   }
 }
 
